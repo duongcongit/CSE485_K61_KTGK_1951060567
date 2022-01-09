@@ -19,6 +19,19 @@
             return $arr_employees;
         }
 
+        // Xóa
+        function deleteEmployee($manv = null){
+            $connection = $this->connectDb();
+
+            $sqlDel = "DELETE FROM nhanvien WHERE maNV='$manv'";
+            $isDelete = mysqli_query($connection, $sqlDel);
+
+            $this->closeDb($connection);
+
+            return $isDelete;
+
+        }
+
 
 
         //
