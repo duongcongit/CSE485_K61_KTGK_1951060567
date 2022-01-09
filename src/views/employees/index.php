@@ -54,14 +54,22 @@
         <div class="row">
             <?php
             if (isset($_GET['success'])) {
-                echo "<h4 style='color:red;'> {$_GET['success']} </h4>";
+                echo "<h4 style='color:green;'> {$_GET['success']} </h4>";
               }
             if (isset($_GET['error'])) {
                 echo "<h4 style='color:red;'> {$_GET['error']} </h4>";
             }
             ?>
             <h2>Danh sách nhân viên</h2>
-            <a class="btn btn-primary mb-2" style="width: fit-content;" href="#"><i class="bi bi-person-plus"></i>Thêm nhân viên</a>
+            <form>
+                <input type="text" name="manv" placeholder="Mã nhân viên">
+                <input type="text" name="hovaten" placeholder="Họ và tên">
+                <input type="text" name="chucvu" placeholder="Chức vụ">
+                <input type="text" name="phongban" placeholder="Phòng ban">
+                <input type="text" name="luong" placeholder="Lương">
+                <input type="text" name="ngayvaolam" placeholder="Ngày vào làm">
+                <a class="btn btn-primary mb-2" style="width: fit-content;" href="#"><i class="bi bi-person-plus"></i>Thêm nhân viên</a>
+            </form>
             <table class="table table-hover table-sm">
                 <thead>
                     <tr class="table-primary">

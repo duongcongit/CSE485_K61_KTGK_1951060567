@@ -19,12 +19,12 @@
 
             if ($isDelete) {
                 $success = "Xóa bản ghi #$manv thành công";
-                header("location: index.php?result=$success");
+                header("location: index.php?success=$success");
             }
             else {
                 //báo lỗi
                 $error = "Xóa bản ghi #$manv thất bại";
-                header("location: index.php?result=$error");
+                header("location: index.php?error=$error");
             }
     
     
